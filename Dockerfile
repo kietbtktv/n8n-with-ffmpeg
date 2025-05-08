@@ -1,4 +1,6 @@
 FROM n8nio/n8n
-
-RUN apt-get update && apt-get install -y ffmpeg
-
+ 
+# Cài đặt FFmpeg
+RUN apt-get update && \
+    apt-get install -y ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
